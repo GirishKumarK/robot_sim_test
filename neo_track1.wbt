@@ -1,0 +1,458 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/balls/protos/Ball.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/obstacles/protos/OilBarrel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/traffic/protos/WorkBarrier.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/CorrugatedMetal.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/GirishKumarK/robot_sim_test/main/mp_400.proto"
+
+WorldInfo {
+  info [
+    "The MyBot robot, the robot used in the tutorial of Webots"
+  ]
+  title "MyBot"
+  basicTimeStep 20
+  FPS 20
+  optimalThreadCount 8
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.2710448049912926 -0.5534711100728857 0.7875305987718316 5.122116332237998
+  position -18.989502356447197 25.02873152183496 23.003147867026804
+  follow "mp_400"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 20 20
+  appearance Parquetry {
+    type "chequered"
+    textureTransform TextureTransform {
+      scale 0.25 0.25
+    }
+  }
+}
+OilBarrel {
+  translation -14.6395 -1.42783 0.35041323264268454
+  rotation 1 0 0 0
+  name "oil barrel back right"
+  radius 0.35
+}
+OilBarrel {
+  translation 9.61273 0.053111 0.44
+  name "oil barrel front center"
+  radius 0.35
+}
+OilBarrel {
+  translation 9.63892 -1.74012 0.44
+  rotation 0 1 0 0
+  name "oil barrel front right"
+  radius 0.35
+}
+OilBarrel {
+  translation 9.70809 1.72229 0.44
+  name "oil barrel front left"
+  radius 0.35
+}
+OilBarrel {
+  translation -14.5548 0.199441 0.44
+  name "oil barrel back center"
+  radius 0.35
+}
+OilBarrel {
+  translation -14.5057 1.82601 0.44
+  name "oil barrel back left"
+  radius 0.35
+}
+Ball {
+  translation 1.91762 -0.030111 0.4984305209273121
+  color 0.7 0.7 0.7
+  radius 0.5
+  mass 1
+  centerOfMass [
+    0 0 0
+  ]
+}
+DEF Right_Wall Solid {
+  children [
+    DEF Right_Wall Group {
+      children [
+        WorkBarrier {
+          translation 0 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+        }
+        WorkBarrier {
+          translation -6.25 -9.45 -0.1
+          rotation -9.589759999999998e-09 -9.589789999999996e-09 0.9999999999999998 1.5707953071795862
+          name "work barrier(7)"
+        }
+        WorkBarrier {
+          translation -7.5 -9.45 -0.1
+          rotation -9.589759999999998e-09 -9.589789999999996e-09 0.9999999999999998 1.5707953071795862
+          name "work barrier(30)"
+        }
+        WorkBarrier {
+          translation -5 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(6)"
+        }
+        WorkBarrier {
+          translation -3.75 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(5)"
+        }
+        WorkBarrier {
+          translation -2.5 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(4)"
+        }
+        WorkBarrier {
+          translation 2.5 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(3)"
+        }
+        WorkBarrier {
+          translation 1.25 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(2)"
+        }
+        WorkBarrier {
+          translation -1.25 -9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(1)"
+        }
+      ]
+    }
+  ]
+  name "solid(9)"
+}
+DEF Left_Wall Solid {
+  children [
+    DEF Left_Wall Group {
+      children [
+        WorkBarrier {
+          translation -1.25 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(15)"
+        }
+        WorkBarrier {
+          translation 1.25 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(14)"
+        }
+        WorkBarrier {
+          translation 2.5 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(13)"
+        }
+        WorkBarrier {
+          translation -2.5 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(12)"
+        }
+        WorkBarrier {
+          translation -3.75 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(11)"
+        }
+        WorkBarrier {
+          translation -5 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(10)"
+        }
+        WorkBarrier {
+          translation -6.25 9.45 -0.1
+          rotation -9.589759999999998e-09 -9.589789999999996e-09 0.9999999999999998 1.5707953071795862
+          name "work barrier(9)"
+        }
+        WorkBarrier {
+          translation -7.5 9.45 -0.1
+          rotation -9.589759999999998e-09 -9.589789999999996e-09 0.9999999999999998 1.5707953071795862
+          name "work barrier(31)"
+        }
+        WorkBarrier {
+          translation 0 9.45 -0.1
+          rotation 9.58976e-09 9.58979e-09 -1 -1.5707953071795862
+          name "work barrier(8)"
+        }
+      ]
+    }
+  ]
+  name "solid(8)"
+}
+DEF Front_Right_Wall Solid {
+  children [
+    DEF Front_Right_Wall Group {
+      children [
+        WorkBarrier {
+          translation 3.68529 -8.99045 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(16)"
+        }
+        WorkBarrier {
+          translation 4.56904 -8.1067 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(17)"
+        }
+        WorkBarrier {
+          translation 5.45283 -7.22291 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(18)"
+        }
+        WorkBarrier {
+          translation 6.33659 -6.33915 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(19)"
+        }
+        WorkBarrier {
+          translation 7.22041 -5.45533 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(20)"
+        }
+        WorkBarrier {
+          translation 8.10416 -4.57158 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(21)"
+        }
+        WorkBarrier {
+          translation 8.98799 -3.68775 -0.1
+          rotation -9.58977e-09 -3.97223e-09 1 2.35619
+          name "work barrier(22)"
+        }
+      ]
+    }
+  ]
+  name "solid(7)"
+}
+DEF Front_Left_Wall Solid {
+  children [
+    DEF Front_Left_Wall Group {
+      children [
+        WorkBarrier {
+          translation 3.68529 8.99045 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(23)"
+        }
+        WorkBarrier {
+          translation 4.56904 8.1067 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(24)"
+        }
+        WorkBarrier {
+          translation 5.45279 7.22295 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(25)"
+        }
+        WorkBarrier {
+          translation 6.33656 6.33918 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(26)"
+        }
+        WorkBarrier {
+          translation 7.22034 5.4554 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(27)"
+        }
+        WorkBarrier {
+          translation 8.10409 4.57165 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(28)"
+        }
+        WorkBarrier {
+          translation 8.98784 3.6879 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(29)"
+        }
+      ]
+    }
+  ]
+  name "solid(6)"
+}
+DEF Front_Right_Cylinder Solid {
+  translation 9.80117 -3.23364 0.5
+  children [
+    Shape {
+      appearance CorrugatedMetal {
+        colorOverride 0.3 0.3 1
+      }
+      geometry Cylinder {
+        height 1
+        radius 0.25
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 1
+    radius 0.25
+  }
+}
+DEF Back_Right_Cylinder Solid {
+  translation -14.2024 3.25735 0.5
+  children [
+    Shape {
+      appearance CorrugatedMetal {
+        colorOverride 0.3 0.3 1
+      }
+      geometry Cylinder {
+        height 1
+        radius 0.25
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject Cylinder {
+    height 1
+    radius 0.25
+  }
+}
+DEF Back_Left_Cylinder Solid {
+  translation -14.2024 -3.25735 0.5
+  children [
+    Shape {
+      appearance CorrugatedMetal {
+        colorOverride 0.3 0.3 1
+      }
+      geometry Cylinder {
+        height 1
+        radius 0.25
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject Cylinder {
+    height 1
+    radius 0.25
+  }
+}
+DEF Front_Left_Cylinder Solid {
+  translation 9.80117 3.23364 0.5
+  children [
+    Shape {
+      appearance CorrugatedMetal {
+        colorOverride 0.3 0.3 1
+      }
+      geometry Cylinder {
+        height 1
+        radius 0.25
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject Cylinder {
+    height 1
+    radius 0.25
+  }
+}
+DEF Back_Right_Wall Solid {
+  translation -4.68 -0.319988 0
+  rotation 0 0 1 3.14159
+  children [
+    DEF Front_Left_Wall Group {
+      children [
+        WorkBarrier {
+          translation 3.68529 8.99045 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(23)"
+        }
+        WorkBarrier {
+          translation 4.56904 8.1067 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(24)"
+        }
+        WorkBarrier {
+          translation 5.45279 7.22295 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(25)"
+        }
+        WorkBarrier {
+          translation 6.33656 6.33918 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(26)"
+        }
+        WorkBarrier {
+          translation 7.22034 5.4554 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(27)"
+        }
+        WorkBarrier {
+          translation 8.10409 4.57165 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(28)"
+        }
+        WorkBarrier {
+          translation 8.98784 3.6879 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(29)"
+        }
+      ]
+    }
+  ]
+  name "solid(4)"
+}
+DEF Back_Left_Wall Solid {
+  translation -4.68 0.280012 0
+  rotation 0 0 -1 -1.5707953071795862
+  children [
+    DEF Front_Left_Wall Group {
+      children [
+        WorkBarrier {
+          translation 3.68529 8.99045 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(23)"
+        }
+        WorkBarrier {
+          translation 4.56904 8.1067 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(24)"
+        }
+        WorkBarrier {
+          translation 5.45279 7.22295 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(25)"
+        }
+        WorkBarrier {
+          translation 6.33656 6.33918 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(26)"
+        }
+        WorkBarrier {
+          translation 7.22034 5.4554 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(27)"
+        }
+        WorkBarrier {
+          translation 8.10409 4.57165 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(28)"
+        }
+        WorkBarrier {
+          translation 8.98784 3.6879 -0.1
+          rotation -9.58976e-09 3.97219e-09 1 -2.3561953071795863
+          name "work barrier(29)"
+        }
+      ]
+    }
+  ]
+  name "solid(5)"
+}
+mp_400 {
+  translation 0 0 0
+  rotation 0 1 0 0
+  name "mp_400"
+  supervisor FALSE
+  synchronization TRUE
+  customData ""
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
